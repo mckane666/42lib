@@ -21,6 +21,7 @@ char		*ft_strnstr(char *str, char *to_find, unsigned int n);
 int		ft_strncmp(char *s1, char *s2, unsigned int n);
 char		*ft_strjoin(char const *s1, char const *s2);
 void		*ft_memset(void *s, int c, size_t n);
+void		*ft_bzero(void *s, size_t n);
 char		*ft_strchr(char const *s, int n);
 char		*ft_strrchr(char const *s, int n);
 int		ft_atoi(char *str);
