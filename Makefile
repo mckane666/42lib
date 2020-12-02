@@ -21,8 +21,12 @@ $(NAME):
 	ar -rc $(NAME) $(OBJ)
 
 clean:
-	rm -rf $(OBJ_DIR)
+	rm -rf $(OBJ)
 fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
+
+norm:
+	norminette $(SRCS)
+
