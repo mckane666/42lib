@@ -13,8 +13,10 @@
 int	ft_isprint(int c)
 {
     int re;
+    unsigned char l;
 
-    if (c >= 32 && c <= 127)
+    l = c;
+    if (l >= 32 && l <= 127)
     {
 	re = 1;
     }

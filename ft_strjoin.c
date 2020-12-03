@@ -19,7 +19,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		t;
 	char		*joined;
 
-	if (!(joined = (char *)malloc(ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1)))
+	if (!(joined = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1)))
 	{
 		return (NULL);
 	}

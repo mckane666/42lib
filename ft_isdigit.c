@@ -13,8 +13,10 @@
 int	ft_isdigit(int c)
 {
 	int re;
+	unsigned char l;
 
-	if (c >= '0' && c <= '9')
+	l = c;
+	if (l >= '0' && l <= '9')
 	{
 		re = 1;
 	}

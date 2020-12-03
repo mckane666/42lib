@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 
-char *ft_strrchr(char const *s, int n)
+char *ft_strrchr(const char *s, int n)
 {
     char *last;
     last = 0;

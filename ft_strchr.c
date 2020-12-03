@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 
-char *ft_strchr(char const *s, int n)
+char *ft_strchr(const char *s, int n)
 {
     while (*s != '\0')
     {

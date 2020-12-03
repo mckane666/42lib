@@ -10,17 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strnstr(char *str, char *to_find, unsigned int n)
+#include "libft.h"
+
+char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 {
 	int i;
 	int j;
 
 	if (to_find[0] == '\0')
 	{
-		return (str);
+		return ((char *)str);
 	}
 	i = 0;
-	while (str[i] && (unsigned int)i < n)
+	while (str[i] && (size_t)i < n)
 	{
 		j = 0;
 		if (str[i] == to_find[j])
@@ -30,7 +32,7 @@ char	*ft_strnstr(char *str, char *to_find, unsigned int n)
 				j++;
 				if (!to_find[j])
 				{
-					return (&str[i]);
+					return ((char *)&str[i]);
 				}
 			}
 		}

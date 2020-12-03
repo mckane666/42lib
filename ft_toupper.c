@@ -13,13 +13,16 @@
 int	ft_toupper(char c)
 {
     int re;
-    if (c >= 'a' && c <= 'z')
+    unsigned char l;
+
+    l = c;
+    if (l >= 'a' && l <= 'z')
     {
-	re = c - 32;
+	re = l - 32;
     }
     else
     {
-	re = c;
+	re = l;
     }
     return (re);
 }
