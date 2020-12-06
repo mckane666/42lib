@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                  :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhenriqu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/29 09:17:57 by jhenriqu          #+#    #+#             */
-/*   Updated: 2020/10/30 14:44:06 by jhenriqu         ###   ########.fr       */
+/*   Created: 2020/12/06 15:15:04 by jhenriqu          #+#    #+#             */
+/*   Updated: 2020/12/06 20:41:36 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalnum(int c)
 {
-	int re;
-	unsigned char l;
+	int				re;
+	unsigned char	l;
 
 	l = c;
 	if ((l >= 'a' && l <= 'z') ||
@@ -23,7 +23,7 @@ int	ft_isalnum(int c)
 	}
 	else
 	{
-	    re = 0;
+		re = 0;
 	}
 	return (re);
 }

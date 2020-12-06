@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhenriqu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/29 15:20:19 by jhenriqu          #+#    #+#             */
-/*   Updated: 2020/11/02 09:12:55 by jhenriqu         ###   ########.fr       */
+/*   Created: 2020/12/06 15:56:33 by jhenriqu          #+#    #+#             */
+/*   Updated: 2020/12/06 20:43:59 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (dest[i] != '\0')

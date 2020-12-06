@@ -3,26 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 15:50:51 by user              #+#    #+#             */
-/*   Updated: 2020/11/29 15:50:51 by user             ###   ########.fr       */
+/*   Updated: 2020/12/06 20:43:03 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-    int re;
-    unsigned char l;
+	int				re;
+	unsigned char	l;
 
-    l = c;
-    if (l >= 32 && l <= 127)
-    {
-	re = 1;
-    }
-    else
-    {
-	re = 0;
-    }
-    return (re);
+	l = c;
+	if (l >= 32 && l <= 127)
+	{
+		re = 1;
+	}
+	else
+	{
+		re = 0;
+	}
+	return (re);
 }

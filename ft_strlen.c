@@ -3,21 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 15:48:27 by user              #+#    #+#             */
-/*   Updated: 2020/11/27 22:00:44 by marvin           ###   ########.fr       */
+/*   Updated: 2020/12/06 16:00:34 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int    ft_strlen(const char *str)
+int	ft_strlen(const char *str)
 {
-    int i;
-    i = 0;
-    while (*str != '\0')
-    {
-	str++;
-        i++;
-    }
-    return (i);
+	int i;
+
+	i = 0;
+	while (*str != '\0')
+	{
+		str++;
+		i++;
+	}
+	return (i);
 }

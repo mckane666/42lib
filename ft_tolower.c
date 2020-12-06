@@ -3,26 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhenriqu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/29 09:17:57 by jhenriqu          #+#    #+#             */
-/*   Updated: 2020/10/30 14:46:06 by jhenriqu         ###   ########.fr       */
+/*   Created: 2020/12/06 16:16:10 by jhenriqu          #+#    #+#             */
+/*   Updated: 2020/12/06 20:45:20 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_tolower(char c)
 {
-    int re;
-    unsigned char l;
+	int				re;
+	unsigned char	l;
 
-    l = c;
-    if (l >= 'A' && l <= 'Z')
-    {
-	re = l + 32;
-    }
-    else
-    {
-	re = l;
-    }
-    return (re);
+	l = c;
+	if (l >= 'A' && l <= 'Z')
+	{
+		re = l + 32;
+	}
+	else
+	{
+		re = l;
+	}
+	return (re);
 }

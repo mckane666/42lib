@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhenriqu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/30 11:08:17 by jhenriqu          #+#    #+#             */
-/*   Updated: 2020/11/04 10:50:28 by jhenriqu         ###   ########.fr       */
+/*   Created: 2020/12/06 15:55:57 by jhenriqu          #+#    #+#             */
+/*   Updated: 2020/12/06 20:43:48 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	int				i;
-	size_t	d;
-	size_t	s;
+	int			i;
+	size_t		d;
+	size_t		s;
 
 	i = 0;
 	d = ft_strlen(dest);

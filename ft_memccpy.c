@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/06 15:20:39 by jhenriqu          #+#    #+#             */
-/*   Updated: 2020/12/06 20:42:02 by jhenriqu         ###   ########.fr       */
+/*   Created: 2020/12/06 15:44:28 by jhenriqu          #+#    #+#             */
+/*   Updated: 2020/12/06 20:43:17 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
-{
-	int				re;
-	unsigned char	l;
+#include "libft.h"
 
-	l = c;
-	if ((l >= 'a' && l <= 'z') || (l >= 'A' && l <= 'Z'))
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	if (!(char *)dest || !(const char *)src)
+		return (0);
+	while (i < n)
 	{
-		re = 1;
+		((char *)dest)[i] = ((const char *)src)[i];
+		if ((char)c == ((char *)src)[i])
+		{
+			return (&((char *)dest)[i + 1]);
+		}
+		i++;
 	}
-	else
-	{
-		re = 0;
-	}
-	return (re);
+	return (NULL);
 }

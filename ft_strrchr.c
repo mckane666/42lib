@@ -3,25 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/30 21:43:05 by user              #+#    #+#             */
-/*   Updated: 2020/11/30 21:43:05 by user             ###   ########.fr       */
+/*   Created: 2020/12/06 16:04:35 by jhenriqu          #+#    #+#             */
+/*   Updated: 2020/12/06 16:04:35 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-char *ft_strrchr(const char *s, int n)
+char	*ft_strrchr(const char *s, int n)
 {
-    char *last;
-    last = 0;
-    while (*s != '\0')
-    {
-	if (*s == n)
-    	{
-	    last = ((char *)s);
+	char *last;
+
+	last = 0;
+	while (*s != '\0')
+	{
+		if (*s == n)
+		{
+			last = ((char *)s);
+		}
+		s++;
 	}
-	s++;
-    }
-    return (last);
+	return (last);
 }
