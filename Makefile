@@ -28,5 +28,5 @@ fclean: clean
 re: fclean all
 
 norm:
-	norminette $(SRCS)
+	norminette $(SRCS) && norminette *.h
 
