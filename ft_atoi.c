@@ -6,7 +6,7 @@
 /*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/06 14:35:47 by jhenriqu          #+#    #+#             */
-/*   Updated: 2020/12/06 14:35:47 by jhenriqu         ###   ########.fr       */
+/*   Updated: 2020/12/06 22:54:15 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,7 @@ int	ft_atoi(const char *str)
 	}
 	while (*str >= '0' && *str <= '9')
 	{
-		num *= 10;
-		num += (*str - '0');
+		num = (num * 10) + (*str - '0');
 		str++;
 	}
 	return (i * num);
