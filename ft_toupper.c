@@ -10,19 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(char c)
+int	ft_toupper(int c)
 {
 	int				re;
-	unsigned char	l;
 
-	l = c;
-	if (l >= 'a' && l <= 'z')
+	if (c >= 'a' && c <= 'z')
 	{
-		re = l - 32;
+		re = c - 32;
 	}
 	else
 	{
-		re = l;
+		re = c;
 	}
 	return (re);
 }

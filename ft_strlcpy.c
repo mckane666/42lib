@@ -21,7 +21,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	{
 		if (size > 0)
 		{
-			if (size - 1 > i)
+			if (size > i)
 			{
 				dest[i] = src[i];
 			}

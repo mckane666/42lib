@@ -12,9 +12,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int	num;
-	int	i;
-	int	count;
+	long int	num;
+	int		i;
+	int		count;
 
 	num = 0;
 	i = 1;
@@ -36,5 +36,5 @@ int	ft_atoi(const char *str)
 		num = (num * 10) + (*str - '0');
 		str++;
 	}
-	return (i * num);
+	return (num * i);
 }

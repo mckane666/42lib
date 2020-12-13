@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/06 15:15:04 by jhenriqu          #+#    #+#             */
-/*   Updated: 2020/12/06 20:41:36 by jhenriqu         ###   ########.fr       */
+/*   Created: 2020/12/07 18:45:33 by jhenriqu          #+#    #+#             */
+/*   Updated: 2020/12/07 18:45:33 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
-{
-	int				re;
+#include "libft.h"
 
-	if ((c >= 'a' && c <= 'z') ||
-				(c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'))
+void	*ft_memmove(void *dest, const void *src, size_t n)
+{
+	char	*temp;
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	j = 0;
+	if (!(temp = malloc(sizeof(size_t) * n)))
+		return (NULL);
+	while (i < n)
 	{
-		re = 1;
+		temp[i] = ((const char *)src)[i];
+		i++;
 	}
-	else
+	while (j < n)
 	{
-		re = 0;
+		((char *)dest)[j] = temp[j];
+		j++;
 	}
-	return (re);
+	free(temp);
+	return (dest);
 }

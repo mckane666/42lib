@@ -20,6 +20,9 @@ $(NAME):
 	$(CC) -c $(CFLAGS) $(SRCS)
 	ar -rc $(NAME) $(OBJ)
 
+so:
+	$(CC) -c $(CFLAGS) $(SRCS)
+	gcc -shared -o libft.so $(OBJ)
 clean:
 	rm -rf $(OBJ)
 fclean: clean

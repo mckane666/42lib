@@ -10,19 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(char c)
+int	ft_tolower(int c)
 {
-	int				re;
-	unsigned char	l;
+	int	re;
 
-	l = c;
-	if (l >= 'A' && l <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 	{
-		re = l + 32;
+		re = c + 32;
 	}
 	else
 	{
-		re = l;
+		re = c;
 	}
 	return (re);
 }

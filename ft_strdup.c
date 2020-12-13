@@ -1,26 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhenriqu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/29 09:17:57 by jhenriqu          #+#    #+#             */
-/*   Updated: 2020/12/03 11:54:02 by user             ###   ########.fr       */
+/*   Created: 2020/11/09 11:04:53 by jhenriqu          #+#    #+#             */
+/*   Updated: 2020/11/10 11:21:07 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
-{
-	int re;
+#include <stdlib.h>
 
-	if (c >= 0 && c <= 127)
+char	*ft_strdup(char *src)
+{
+	int		i;
+	int		j;
+	char	*copy;
+
+	i = 0;
+	while (src[i] != 0)
 	{
-		re = 1;
+		i++;
 	}
-	else
+	copy = (char*)malloc(sizeof(char) * (i + 1));
+	if (!copy)
 	{
-		re = 0;
+		return (0);
 	}
-	return (re);
+	j = 0;
+	while (src[j] != 0)
+	{
+		copy[j] = src[j];
+		j++;
+	}
+	copy[j] = '\0';
+	return (copy);
 }
