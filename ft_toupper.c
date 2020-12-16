@@ -6,14 +6,14 @@
 /*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/06 16:16:39 by jhenriqu          #+#    #+#             */
-/*   Updated: 2020/12/06 20:45:32 by jhenriqu         ###   ########.fr       */
+/*   Updated: 2020/12/16 10:16:37 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(int c)
 {
 	int	re;
-	
+
 	if (c < -1)
 		return ((unsigned char)c);
 	if (c >= 'a' && c <= 'z')

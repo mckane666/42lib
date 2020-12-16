@@ -6,13 +6,13 @@
 /*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 15:48:27 by user              #+#    #+#             */
-/*   Updated: 2020/12/06 16:00:34 by jhenriqu         ###   ########.fr       */
+/*   Updated: 2020/12/14 00:26:25 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strlen(const char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (*str != '\0')

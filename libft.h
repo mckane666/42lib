@@ -6,7 +6,7 @@
 /*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/06 22:11:43 by jhenriqu          #+#    #+#             */
-/*   Updated: 2020/12/07 19:53:39 by jhenriqu         ###   ########.fr       */
+/*   Updated: 2020/12/16 16:04:22 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,16 @@
 
 # include <stdlib.h>
 
+/*
+** 1st part
+*/
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 char	*ft_strnstr(const char *str, const char *to_find, size_t n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
-char	*ft_strjoin(char const *s1, char const *s2);
+void	*ft_memchr(const void *s, int c, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
@@ -36,4 +40,9 @@ int		ft_isascii(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_strlen(const char *str);
+
+/*
+** 2nd part
+*/
+char	*ft_strjoin(char const *s1, char const *s2);
 #endif

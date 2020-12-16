@@ -6,7 +6,7 @@
 /*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/06 15:48:46 by jhenriqu          #+#    #+#             */
-/*   Updated: 2020/12/06 20:44:49 by jhenriqu         ###   ########.fr       */
+/*   Updated: 2020/12/16 10:18:32 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		t;
 	char	*joined;
 
-	if (!(joined = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2)) + 1)))
+	if (!(joined = (char *)malloc(sizeof(char)
+	* (ft_strlen(s1) + ft_strlen(s2)) + 1)))
 	{
 		return (NULL);
 	}

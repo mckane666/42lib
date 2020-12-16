@@ -1,39 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/07 18:45:33 by jhenriqu          #+#    #+#             */
-/*   Updated: 2020/12/16 11:31:23 by jhenriqu         ###   ########.fr       */
+/*   Created: 2020/12/16 15:34:00 by jhenriqu          #+#    #+#             */
+/*   Updated: 2020/12/16 15:34:00 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t		i;
+	unsigned char	*us1;
+	unsigned char	*us2;
+	size_t			i;
 
 	i = 0;
-	if (dest == 0 && src == 0)
-		return (0);
-	if (dest < src)
+	us1 = (unsigned char *)s1;
+	us2 = (unsigned char *)s2;
+	while (us1[i] == us2[i] && i + 1 < n)
 	{
-		while (i < n)
-		{
-			((char *)dest)[i] = ((const char *)src)[i];
-			i++;
-		}
+		i++;
 	}
-	else if (dest > src)
-	{
-		while (n > 0)
-		{
-			((char *)dest)[n - 1] = ((const char *)src)[n - 1];
-			n--;
-		}
-	}
-	return (dest);
+	return (us1[i] - us2[i]);
 }

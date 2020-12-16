@@ -26,5 +26,5 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 		}
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
