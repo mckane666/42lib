@@ -20,7 +20,7 @@ char	*ft_itoa(int n)
 
 	count = 1;
 	ln = n;
-	while (n /= 10)
+	while (n /= 10 && n == 0)
 		count++;
 	if (!(str = malloc(sizeof(char) * count)))
 		return (NULL);
