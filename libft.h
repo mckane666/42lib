@@ -6,7 +6,7 @@
 /*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/06 22:11:43 by jhenriqu          #+#    #+#             */
-/*   Updated: 2020/12/16 16:04:22 by jhenriqu         ###   ########.fr       */
+/*   Updated: 2020/12/18 10:53:51 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,5 @@ int		ft_strlen(const char *str);
 ** 2nd part
 */
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_itoa(int n);
 #endif
