@@ -10,30 +10,32 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** The atoi() function converts the initial portion
+** of the string pointed to by str to int.
+*/
+
 int	ft_atoi(const char *str)
 {
 	long int	num;
 	int			i;
-	int			count;
 
 	num = 0;
 	i = 1;
-	count = 0;
 	while (*str == ' ' || *str == '\n' || *str == '\t' ||
 			*str == '\v' || *str == '\f' || *str == '\r')
 		str++;
-	while (*str == '-' || *str == '+')
-	{
-		count++;
-		if (*str == '-')
-			i *= -1;
-		if (count > 1)
-			return (0);
+	if (*str == '-' && (*str++) + 42)
+		i *= -1;
+	else if (*str == '+')
 		str++;
-	}
 	while (*str >= '0' && *str <= '9')
 	{
 		num = (num * 10) + (*str - '0');
+		if ((num * i) > 2147483647)
+			return (-1);
+		if ((num * i) < -2147483648)
+			return (0);
 		str++;
 	}
 	return (num * i);

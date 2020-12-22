@@ -12,20 +12,28 @@
 
 #include "libft.h"
 
+/*
+** The ft_strlcpy() function copy strings.
+*/
+
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;
+	size_t	len;
 
+	len = 0;
 	if (!dest || !src)
 		return (0);
+	while (src[len])
+		len++;
+	if (size == 0)
+		return (len);
 	i = 0;
-	while (dest[i] != '\0' && size > 0)
+	while (src[i] != 0 && i < size - 1)
 	{
-		if (size > i)
-		{
-			dest[i] = src[i];
-		}
-		i++;
+		dest[i] = src[i];
+		++i;
 	}
-	return (ft_strlen(src));
+	dest[i] = 0;
+	return (len);
 }

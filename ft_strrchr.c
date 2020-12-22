@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** The ft_strrchr() function returns a pointer
+** to the last occurrence of the character n in the string s.
+*/
+
 char	*ft_strrchr(const char *s, int n)
 {
 	char	*last;
@@ -23,5 +28,7 @@ char	*ft_strrchr(const char *s, int n)
 		}
 		s++;
 	}
+	if (*s == 0 && n == 0)
+		return ((char *)s);
 	return (last);
 }

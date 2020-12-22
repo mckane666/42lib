@@ -10,7 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
+
+/*
+** The  ft_strdup() function returns a pointer to a new string
+** which is a duplicate of the string src.
+*/
 
 char	*ft_strdup(char *src)
 {

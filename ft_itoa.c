@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/*
+** The itoa() function converts int to string.
+*/
+
 char	*ft_itoa(int n)
 {
 	char		*str;
@@ -20,7 +24,7 @@ char	*ft_itoa(int n)
 
 	count = 1;
 	ln = n;
-	while (n /= 10 && n == 0)
+	while (n /= 10)
 		count++;
 	if (!(str = malloc(sizeof(char) * count)))
 		return (NULL);

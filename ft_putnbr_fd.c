@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/16 16:15:05 by jhenriqu          #+#    #+#             */
-/*   Updated: 2020/12/16 18:08:00 by jhenriqu         ###   ########.fr       */
+/*   Created: 2020/12/19 20:05:13 by jhenriqu          #+#    #+#             */
+/*   Updated: 2020/12/20 13:07:35 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** The ft_calloc() function allocates memory for an array of nmemb
-** elements of size bytes each and returns a pointer to the allocated memory.
-*/
-
-void	*ft_calloc(size_t nmemb, size_t size)
+void	ft_putnbr_fd(int nb, int fd)
 {
-	void *ptr;
+	long int l;
 
-	if (!(ptr = malloc(nmemb * size)))
-		return (NULL);
-	ft_bzero(ptr, size * nmemb);
-	return (ptr);
+	l = nb;
+	if (nb < 0)
+	{
+		ft_putchar_fd('-', fd);
+		l = -l;
+	}
+	if (nb / 10)
+	{
+		ft_putnbr_fd(l / 10, fd);
+	}
+	ft_putchar_fd(l % 10 + '0', fd);
 }

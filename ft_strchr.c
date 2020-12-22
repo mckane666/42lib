@@ -10,9 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** The ft_strchr() function returns a pointer
+** to the first occurrence of the character n in the string s.
+*/
+
 char	*ft_strchr(const char *s, int n)
 {
-	while (*s != '\0')
+	while (*s)
 	{
 		if (*s == n)
 		{
@@ -20,5 +25,7 @@ char	*ft_strchr(const char *s, int n)
 		}
 		s++;
 	}
+	if (*s == 0 && n == 0)
+		return ((char *)s);
 	return (0);
 }

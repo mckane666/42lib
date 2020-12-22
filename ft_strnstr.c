@@ -6,34 +6,37 @@
 /*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 11:08:17 by jhenriqu          #+#    #+#             */
-/*   Updated: 2020/12/14 00:26:50 by jhenriqu         ###   ########.fr       */
+/*   Updated: 2020/12/22 14:03:10 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *str, const char *to_find, size_t n)
-{
-	int	i;
-	int	j;
+/*
+** The strnstr() function locates the first occurrence
+** of the null-terminated string little in the string big,
+** where not more than n characters are searched.
+*/
 
-	if (to_find[0] == '\0')
+char	*ft_strnstr(const char *big, const char *little, size_t n)
+{
+	size_t	i;
+	size_t	j;
+
+	if (little[0] == '\0')
 	{
-		return ((char *)str);
+		return ((char *)big);
 	}
 	i = 0;
-	while (str[i] && (size_t)i < n)
+	while (big[i] && i < n)
 	{
 		j = 0;
-		if (str[i] == to_find[j])
+		while (big[i + j] == little[j] && (i + j) < n)
 		{
-			while (str[i + j] == to_find[j])
+			j++;
+			if (!little[j])
 			{
-				j++;
-				if (!to_find[j])
-				{
-					return ((char *)&str[i]);
-				}
+				return ((char *)&big[i]);
 			}
 		}
 		i++;
