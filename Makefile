@@ -13,15 +13,31 @@
 CC = gcc
 NAME = libft.a
 CFLAGS = -Wall -Wextra -Werror
-SRCS = ft_*.c
+
+SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
+ft_isdigit.c ft_isprint.c ft_itoa.c ft_memccpy.c ft_memchr.c ft_memcmp.c \
+ft_memcpy.c ft_memmove.c ft_memset.c ft_strlcpy.c ft_strlcat.c ft_strnstr.c \
+ft_strncmp.c ft_strchr.c ft_strrchr.c ft_strdup.c ft_toupper.c ft_tolower.c \
+ft_strlen.c ft_strjoin.c ft_strtrim.c ft_split.c ft_substr.c ft_strmapi.c \
+ft_putnbr_fd.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
+
+SRCS_bonus = ft_isblank.c ft_putnbr.c ft_putchar.c ft_isnumber.c ft_islower.c \
+ft_isupper.c ft_lstnew.c ft_lstadd_front.c ft_lstsize.c
+
+
 OBJ = ft_*.o
 all:$(NAME)
 $(NAME):
 	$(CC) -c $(CFLAGS) $(SRCS)
 	ar -rc $(NAME) $(OBJ)
 
+bonus:
+	$(CC) -c $(CFLAGS) $(SRCS_bonus)
+	ar -rc $(NAME) $(OBJ)
+
+
 so:
-	$(CC) -fPIC -c $(CFLAGS) $(SRCS)
+	$(CC) -fPIC -c $(CFLAGS) $(SRCS) $(SRCS_bonus)
 	gcc -shared -o libft.so $(OBJ)
 clean:
 	rm -rf $(OBJ)
