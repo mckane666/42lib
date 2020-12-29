@@ -32,7 +32,7 @@ $(NAME):
 	ar -rc $(NAME) $(OBJ)
 
 bonus:
-	$(CC) -c $(CFLAGS) $(SRCS_bonus)
+	$(CC) -c $(CFLAGS) $(SRCS) $(SRCS_bonus)
 	ar -rc $(NAME) $(OBJ)
 
 
@@ -45,5 +45,3 @@ fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
-
-
