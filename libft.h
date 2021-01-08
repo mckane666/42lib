@@ -42,6 +42,8 @@ int				ft_isascii(int c);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
 int				ft_strlen(const char *str);
+void			*ft_calloc(size_t nmemb, size_t size);
+
 
 /*
 ** 2nd part
