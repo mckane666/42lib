@@ -29,7 +29,7 @@ char	*ft_itoa(int n)
 	if (!(str = malloc(sizeof(char) * count)))
 		return (NULL);
 	if (ln == 0)
-		return ("0\0");
+		str[0] = '0';
 	if (ln < 0)
 	{
 		str[0] = '-';
