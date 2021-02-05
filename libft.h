@@ -6,7 +6,7 @@
 /*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/06 22:11:43 by jhenriqu          #+#    #+#             */
-/*   Updated: 2020/12/20 13:12:48 by jhenriqu         ###   ########.fr       */
+/*   Updated: 2021/01/09 12:03:07 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ int				ft_tolower(int c);
 int				ft_strlen(const char *str);
 void			*ft_calloc(size_t nmemb, size_t size);
 
-
 /*
 ** 2nd part
 */
@@ -54,11 +53,14 @@ char			*ft_strtrim(char const *s1, char const *set);
 char			**ft_split(char const *s, char c);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
 void			ft_putnbr_fd(int nb, int fd);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *str, int fd);
 void			ft_putendl_fd(char *str, int fd);
-
+void			ft_putstr(char *str);
+void			ft_putchar(char c);
+void			ft_putnbr(int nb);
 /*
 ** bonus part
 */
