@@ -33,11 +33,11 @@ OBJ = ft_*.o
 all:$(NAME)
 $(NAME):
 	$(CC) -c $(CFLAGS) $(SRCS)
-	ar -rc $(NAME) $(OBJ)
+	ar -rcs $(NAME) $(OBJ)
 
 bonus:
 	$(CC) -c $(CFLAGS) $(SRCS) $(SRCS_bonus)
-	ar -rc $(NAME) $(OBJ)
+	ar -rcs $(NAME) $(OBJ)
 
 
 so:

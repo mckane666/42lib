@@ -6,7 +6,7 @@
 /*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/06 14:35:47 by jhenriqu          #+#    #+#             */
-/*   Updated: 2020/12/16 10:11:52 by jhenriqu         ###   ########.fr       */
+/*   Updated: 2021/02/08 08:05:21 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ int	ft_atoi(const char *str)
 
 	num = 0;
 	i = 1;
-	while (*str == ' ' || *str == '\n' || *str == '\t' ||
-			*str == '\v' || *str == '\f' || *str == '\r')
+	while (*str == ' ' || *str == '\n' || *str == '\t'
+		|| *str == '\v' || *str == '\f' || *str == '\r')
 		str++;
 	if (*str == '-' && (*str++) + 42)
 		i *= -1;

@@ -6,7 +6,7 @@
 /*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/06 22:11:43 by jhenriqu          #+#    #+#             */
-/*   Updated: 2021/01/09 12:03:07 by jhenriqu         ###   ########.fr       */
+/*   Updated: 2021/02/08 16:08:34 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,11 +64,20 @@ void			ft_putnbr(int nb);
 /*
 ** bonus part
 */
-typedef struct	s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }				t_list;
+
+typedef struct s_split
+{
+	int		i;
+	int		j;
+	int		start;
+	char	**big_new;
+	char	*temp;
+}				t_split;
 
 int				ft_isblank(int c);
 void			ft_putnbr(int nb);
@@ -85,5 +94,5 @@ void			ft_lstdelone(t_list *lst, void (*del)(void *));
 void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
-void (*del)(void *));
+					void (*del)(void *));
 #endif

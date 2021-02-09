@@ -6,7 +6,7 @@
 /*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/28 21:35:49 by jhenriqu          #+#    #+#             */
-/*   Updated: 2020/12/28 21:57:11 by jhenriqu         ###   ########.fr       */
+/*   Updated: 2021/02/08 14:23:41 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list *temp;
+	t_list	*temp;
 
 	while (*lst && del)
 	{

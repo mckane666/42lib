@@ -6,13 +6,13 @@
 /*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 10:52:58 by jhenriqu          #+#    #+#             */
-/*   Updated: 2020/12/20 13:10:04 by jhenriqu         ###   ########.fr       */
+/*   Updated: 2021/02/08 16:04:34 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		look(char c, char const *set)
+int	look(char c, char const *set)
 {
 	int	i;
 
@@ -41,7 +41,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 	while (len > i && look((char)s1[len - 1], set))
 		len--;
-	if (!(new = malloc(sizeof(*s1) * (len - i + 1))))
+	new = malloc(sizeof(*s1) * (len - i + 1));
+	if (!(new))
 		return (NULL);
 	j = 0;
 	while (i < len)

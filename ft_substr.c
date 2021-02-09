@@ -6,7 +6,7 @@
 /*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/18 14:03:20 by jhenriqu          #+#    #+#             */
-/*   Updated: 2020/12/20 13:11:48 by jhenriqu         ###   ########.fr       */
+/*   Updated: 2021/02/08 16:06:03 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	{
 		return (ft_strdup(""));
 	}
-	if (!(sbs = malloc(sizeof(char) * len + 1)))
+	sbs = malloc(sizeof(char) * len + 1);
+	if (!(sbs))
 		return (NULL);
 	j = 0;
 	i = start;

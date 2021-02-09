@@ -6,7 +6,7 @@
 /*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 11:08:17 by jhenriqu          #+#    #+#             */
-/*   Updated: 2020/12/16 18:11:42 by jhenriqu         ###   ########.fr       */
+/*   Updated: 2021/02/08 15:23:56 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	if (n != 0)
 	{
-		while (us1[i] == us2[i] && us1[i] != '\0' &&
-		us2[i] != '\0' && i + 1 < n)
+		while (us1[i] == us2[i] && us1[i] != '\0'
+			&& us2[i] != '\0' && i + 1 < n)
 		{
 			i++;
 		}
