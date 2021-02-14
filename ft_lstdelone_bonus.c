@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/19 20:03:59 by jhenriqu          #+#    #+#             */
-/*   Updated: 2020/12/20 13:08:18 by jhenriqu         ###   ########.fr       */
+/*   Created: 2020/12/28 21:16:02 by jhenriqu          #+#    #+#             */
+/*   Updated: 2020/12/28 21:28:00 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *str, int fd)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	int i;
-
-	i = 0;
-	if (!str)
-		return ;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	write(fd, str, i);
+	if (lst && del)
+		del(lst->content);
+	free(lst);
 }

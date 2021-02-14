@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/19 20:03:59 by jhenriqu          #+#    #+#             */
-/*   Updated: 2020/12/20 13:08:18 by jhenriqu         ###   ########.fr       */
+/*   Created: 2021/01/08 11:36:04 by jhenriqu          #+#    #+#             */
+/*   Updated: 2021/01/08 11:36:40 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *str, int fd)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	int i;
+	t_list	*new;
+	t_list	*temp;
 
-	i = 0;
-	if (!str)
-		return ;
-	while (str[i] != '\0')
+	new = NULL;
+	while (lst)
 	{
-		i++;
+		temp = ft_lstnew((*f)(lst->content));
+		if (!temp)
+		{
+			ft_lstclear(&new, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&new, temp);
+		temp = temp->next;
+		lst = lst->next;
 	}
-	write(fd, str, i);
+	return (new);
 }

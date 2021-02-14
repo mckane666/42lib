@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/19 20:03:59 by jhenriqu          #+#    #+#             */
-/*   Updated: 2020/12/20 13:08:18 by jhenriqu         ###   ########.fr       */
+/*   Created: 2020/12/28 10:34:09 by jhenriqu          #+#    #+#             */
+/*   Updated: 2021/02/12 10:45:21 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-void	ft_putstr_fd(char *str, int fd)
+t_list	*ft_lstnew(void *content)
 {
-	int i;
+	t_list *new;
 
-	i = 0;
-	if (!str)
-		return ;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	write(fd, str, i);
+	if (!(new = malloc(sizeof(t_list))))
+		return (NULL);
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }

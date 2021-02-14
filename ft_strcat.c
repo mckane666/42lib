@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
+/*   By: jhenriqu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/19 20:03:59 by jhenriqu          #+#    #+#             */
-/*   Updated: 2020/12/20 13:08:18 by jhenriqu         ###   ########.fr       */
+/*   Created: 2020/10/30 11:08:17 by jhenriqu          #+#    #+#             */
+/*   Updated: 2020/11/03 09:06:46 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putstr_fd(char *str, int fd)
+char	*ft_strcat(char *dest, char *src)
 {
 	int i;
+	int j;
 
 	i = 0;
-	if (!str)
-		return ;
-	while (str[i] != '\0')
+	j = 0;
+	while (dest[i] != '\0')
 	{
 		i++;
 	}
-	write(fd, str, i);
+	while (src[j] != '\0')
+	{
+		dest[i + j] = src[j];
+		j++;
+	}
+	dest[i + j] = '\0';
+	return (dest);
 }

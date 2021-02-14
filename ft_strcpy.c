@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
+/*   By: jhenriqu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/19 20:03:59 by jhenriqu          #+#    #+#             */
-/*   Updated: 2020/12/20 13:08:18 by jhenriqu         ###   ########.fr       */
+/*   Created: 2020/10/28 17:24:53 by jhenriqu          #+#    #+#             */
+/*   Updated: 2020/10/30 15:04:24 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putstr_fd(char *str, int fd)
+char	*ft_strcpy(char *dest, char *src)
 {
 	int i;
 
 	i = 0;
-	if (!str)
-		return ;
-	while (str[i] != '\0')
+	while (src[i] != '\0')
 	{
+		dest[i] = src[i];
 		i++;
 	}
-	write(fd, str, i);
+	dest[i] = '\0';
+	return (dest);
 }

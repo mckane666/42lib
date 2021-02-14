@@ -6,7 +6,7 @@
 /*   By: jhenriqu <jhenriqu@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/17 20:17:09 by jhenriqu          #+#    #+#             */
-/*   Updated: 2021/02/08 14:13:24 by jhenriqu         ###   ########.fr       */
+/*   Updated: 2021/02/12 10:44:17 by jhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,6 @@
 ** The itoa() function converts int to string.
 */
 
-int	str_alloc_mem(char **str, int n, int count)
-{
-	while (n / 10)
-	{
-		n = n / 10;
-		count++;
-	}
-	*str = malloc(sizeof(char) * count);
-	return (count);
-}
-
 char	*ft_itoa(int n)
 {
 	char		*str;
@@ -35,8 +24,9 @@ char	*ft_itoa(int n)
 
 	count = 1;
 	ln = n;
-	count = str_alloc_mem(&str, n, count);
-	if (!(str))
+	while (n /= 10)
+		count++;
+	if (!(str = malloc(sizeof(char) * count + 2)))
 		return (NULL);
 	if (ln == 0)
 		str[0] = '0';
